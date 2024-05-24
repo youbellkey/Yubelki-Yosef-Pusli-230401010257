@@ -324,3 +324,21 @@ footer {
         padding-top: 75%; /* Aspect ratio for 4:3 */
     }
 }
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Mengubah tata letak menjadi satu kolom */
+    }
+
+    .sidebar {
+        flex: none; /* Menghapus fleksibilitas sidebar */
+        width: 100%; /* Menggunakan lebar maksimum */
+        max-width: 100%; /* Menggunakan lebar maksimum */
+        margin-bottom: 20px; /* Menambah margin antara sidebar dan map */
+    }
+
+    .map-container {
+        flex: none; /* Menghapus fleksibilitas map */
+        width: 100%; /* Menggunakan lebar maksimum */
+        max-width: 100%; /* Menggunakan lebar maksimum */
+    }
+}
