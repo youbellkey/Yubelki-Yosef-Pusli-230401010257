@@ -1,0 +1,77 @@
+// script.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const backToTopButton = document.createElement('button');
+
+    const createBackToTopButton = () => {
+        backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
+        backToTopButton.classList.add('back-to-top');
+        document.body.appendChild(backToTopButton);
+    };
+
+    const toggleBackToTopButton = () => {
+        if (window.scrollY > 200) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
+    const handleDownloadButtonClick = (e) => {
+        e.preventDefault();
+        const href = downloadButton.getAttribute('href');
+        const fileName = downloadButton.getAttribute('download');
+        smoothScroll('.download');
+        setTimeout(() => {
+            const a = document.createElement('a');
+            a.href = href;
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }, 800);
+    };
+
+    createBackToTopButton();
+
+    window.addEventListener('scroll', toggleBackToTopButton);
+    backToTopButton.addEventListener('click', scrollToTop);
+
+    const certificates = document.querySelectorAll('.sertifikat-list img');
+
+    certificates.forEach(certificate => {
+        certificate.addEventListener('click', () => {
+            window.open(certificate.src, '_blank');
+        });
+    });
+
+    const socialLinks = document.querySelectorAll('.link-sosial a');
+    socialLinks.forEach(link => {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('aria-label', link.getAttribute('aria-label'));
+    });
+
+    const footer = document.createElement('footer');
+    const sidebar = document.querySelector('.sidebar');
+
+    footer.innerHTML = `
+        <div class="link-sosial">
+            <a href="https://web.facebook.com/youbellkey" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/youbellkey_/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/@youbellkey6008?si=r_teGUDU-YKOytkU" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/6282154676626" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="copyright">
+            &copy; 2024 YOUBELLKEY
+        </div>
+    `;
+
+    sidebar.appendChild(footer);
+});

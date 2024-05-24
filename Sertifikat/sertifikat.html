@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates - Yubelki Yosef Pusli</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="../images/icon.png" alt="icon">
+        </div>
+        <ul id="menulist">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../About Me/about me.html">About</a></li>
+            <li><a href="sertifikat.html">Certificates</a></li>
+            <li><a href="../Map/map.html">Map</a></li>
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+    <div class="container">
+        <main class="konten">
+            <section class="sertifikat">
+                <h1>Certificates</h1>
+                <div class="sertifikat-list">
+                    <img src="index_files/sertifikat1.png" alt="Certificate 1">
+                    <img src="index_files/sertifikat2.png" alt="Certificate 2">
+                    <img src="index_files/sertifikat3.png" alt="Certificate 3">
+                    <img src="index_files/sertifikat4.png" alt="Certificate 4">
+                    <img src="index_files/sertifikat5.png" alt="Certificate 5">
+                    <img src="index_files/sertifikat6.png" alt="Certificate 6">
+                    <img src="index_files/sertifikat7.png" alt="Certificate 7">
+                    <img src="index_files/sertifikat8.png" alt="Certificate 8">
+                    <img src="index_files/sertifikat9.png" alt="Certificate 9">
+                    <img src="index_files/sertifikat10.png" alt="Certificate 10">
+                    <img src="index_files/sertifikat11.png" alt="Certificate 11">
+                    <img src="index_files/sertifikat12.png" alt="Certificate 12">
+                    <img src="index_files/sertifikat13.png" alt="Certificate 13">
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <footer>
+        <div class="link-sosial">
+            <a href="https://web.facebook.com/youbellkey" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/youbellkey_/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/@youbellkey6008?si=r_teGUDU-YKOytkU" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/6282154676626" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="copyright">
+            &copy; 2024 YOUBELLKEY
+        </div>
+    </footer>
+    <script>
+        let menulist = document.getElementById("menulist");
+        menulist.style.maxHeight = "0px";
+        
+        function toggleMenu() {
+            if (menulist.style.maxHeight === "0px") {
+                menulist.style.maxHeight = "300px";
+            } else {
+                menulist.style.maxHeight = "0px";
+            }
+        }
+    </script>
+    <script src="../javascript/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #dcdcdc;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 100%;
+    max-width: 300px;
+    background: #212121;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    /* Hapus aturan .link-sosial a dari sidebar */
+}
+
+.profil {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profil img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profil h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #4CAF50;
+}
+
+.profil p {
+    margin: 0;
+    font-size: 1em;
+    color: #b0b0b0;
+}
+
+.info-kontak p, .info-kontak a {
+    font-size: 0.9em;
+    color: #b0b0b0;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.info-kontak i {
+    margin-right: 10px;
+}
+
+.konten {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.konten section {
+    margin-bottom: 20px;
+}
+
+.konten h1 {
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+    color: #4CAF50;
+}
+
+.konten ul {
+    list-style: none;
+    padding: 0;
+}
+
+.konten ul li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #424242;
+    border-radius: 5px;
+}
+
+.konten ul li strong {
+    color: #4CAF50;
+}
+
+.tombol-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    position: relative;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.tombol-download span {
+    visibility: hidden;
+    opacity: 0;
+    white-space: nowrap;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tombol-download:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+.tombol-download:hover span {
+    visibility: visible;
+    opacity: 1;
+}
+
+.link-kontak {
+    color: #b0b0b0;
+    text-decoration: none;
+}
+
+.link-kontak:hover {
+    text-decoration: underline;
+}
+
+.download {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top i {
+    font-size: 20px;
+}
+
+.back-to-top:hover {
+    background-color: #333;
+}
+
+@media (max-width: 600px) {
+    .download {
+        top: 20px;
+        right: 20px;
+    }
+
+    .tombol-download {
+        width: 40px;
+        height: 40px;
+    }
+
+    .tombol-download span {
+        left: 50px;
+        padding: 5px 10px;
+    }
+}
+
+div {
+    background: #212121;
+    padding: 20px;
+    color: #b0b0b0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+div .link-sosial {
+    margin-bottom: 10px;
+}
+
+div .link-sosial a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 50%;
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    transition: background 0.3s;
+}
+
+div .link-sosial a:hover {
+    background: #333;
+}
+
+div .copyright {
+    margin-top: 10px;
+}

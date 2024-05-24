@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #dcdcdc;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 100%;
+    max-width: 300px;
+    background: #212121;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+.logo img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profil {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profil img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profil h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #4CAF50;
+}
+
+.profil p {
+    margin: 0;
+    font-size: 1em;
+    color: #b0b0b0;
+}
+
+.info-kontak p,
+.info-kontak a {
+    font-size: 0.9em;
+    color: #b0b0b0;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.info-kontak i {
+    margin-right: 10px;
+}
+
+nav {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #424242;
+    position: relative;
+    height: 50px;
+}
+
+nav img {
+    float: left;
+    height: 30px;
+    margin-top: 10px;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+.menu-icon {
+    display: none; /* default hidden */
+}
+
+.menu-icon i {
+    color: #4CAF50;
+    font-size: 30px;
+    display: none; /* default hidden */
+}
+
+
+.konten {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.konten section {
+    margin-bottom: 20px;
+}
+
+.konten h1 {
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+    color: #4CAF50;
+}
+
+.konten ul {
+    list-style: none;
+    padding: 0;
+}
+
+.konten ul li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #424242;
+    border-radius: 5px;
+}
+
+.konten ul li strong {
+    color: #4CAF50;
+}
+
+.konten .sertifikat-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.konten .sertifikat-list img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.link-kontak {
+    color: #b0b0b0;
+    text-decoration: none;
+}
+
+.link-kontak:hover {
+    text-decoration: underline;
+}
+
+.download {
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.tombol-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.tombol-download:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+.tombol-download:hover span {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Modal Container */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    z-index: 1; /* On top of other elements */
+    padding-top: 60px; /* Space from the top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Scrollable if necessary */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    margin: auto; /* Centered */
+    display: block; /* Block display */
+    width: 80%; /* 80% of the container's width */
+    max-width: 700px; /* Maximum width */
+    animation-name: zoom; /* Animation name */
+    animation-duration: 0.6s; /* Duration of the animation */
+}
+
+/* Add Animation - Zoom in the Modal */
+@keyframes zoom {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: #424242;
+        gap: 0;
+        overflow: hidden;
+    }
+
+    nav ul li {
+        padding: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-icon i {
+        display: block;
+    }
+
+    #menulist {
+        transition: max-height 0.5s ease-out;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background: #212121;
+    padding: 10px;
+    color: #b0b0b0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.link-sosial {
+    display: flex;
+    gap: 10px;
+}
+
+.link-sosial a {
+    color: #4CAF50;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.link-sosial a:hover {
+    color: #dcdcdc;
+}
+/* Default map size */
+.map-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* Aspect ratio for 16:9 */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Adjust map size for smaller screens */
+@media (max-width: 768px) {
+    .map-container {
+        padding-top: 75%; /* Aspect ratio for 4:3 */
+    }
+}
